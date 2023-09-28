@@ -12,65 +12,56 @@
   </head>
   <body>
     <div id="main">
-      <div id="page1">
-        <div id="heading">
-          <h1 class="name">HARSH</h1>
-          <h1 class="oname">FRONTEND DEV.</h1>
+      <div data-scroll data-scroll-container id="page1">
+        <div data-scroll data-scroll-section id="heading">
+          <div id="namediv">
+            <h1 class="name">HARSH</h1>
+          </div>
+          <div id="frontname">
+            <h1 class="oname">FRONTEND DEV.</h1>
+          </div>
         </div>
 
-        <p>
+        <p data-scroll data-scroll-section>
           <span>HELLO, I'M</span> HARSH <br />
           <span>I</span> CRAFT WEBSITES <span>WITH</span><br />
           <span> GREAT ATTENTION TO </span>DETAILS
         </p>
-        <div id="about">  
-          <div id="rabout">
-            <div ata-scroll
-            data-scroll-speed="" id="aboutimg">
-              <img data-scroll
-            data-scroll-speed="3" src="https://images.unsplash.com/photo-1681115085351-4c207e8e4ff9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="">
+        <div data-scroll data-scroll-container id="about">
+          <div data-scroll data-scroll-section id="rabout">
+            <div ata-scroll data-scroll-speed="" id="aboutimg">
+              <img
+                data-scroll
+                data-scroll-speed="3"
+                src="https://images.unsplash.com/photo-1681115085351-4c207e8e4ff9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80"
+                alt=""
+              />
             </div>
           </div>
-            <div id="leftabout">
-          <h1 class="abouth1">ABOUT</h1>
-          <p><span>W</span>elcome to my portfolio website! I am a passionate and detail-oriented Frontend Web Developer. My love for crafting exceptional websites drives me to continuously learn and adapt to the ever-evolving tech landscape.</p>
-           <p><span>I</span> approach every project with unwavering enthusiasm and an eye for perfection. I believe that small details can make a big difference in creating memorable user experiences.</p>
-           <p><span>I</span>specialize in frontend web development and have honed my skills in HTML, CSS, JavaScript, frontend libraries like GSAP for animations, and Locomotive for smooth scrolling. I am well-versed in creating responsive and visually appealing websites that adapt flawlessly to various screen sizes and devices.</p>
-        </div></div>
-       
-
-      </div>
-      <div id="page2">
-        <div id="elem1" class="elem">
-          <img
-            data-scroll
-            data-scroll-speed="2"
-            src="https://images.unsplash.com/photo-1672709953542-6502352636ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-            alt=""
-          />
-          <div data-scroll data-scroll-speed="-1" id="dets"></div>
-        </div>
-        <div id="elem2" class="elem">
-          <img
-            data-scroll
-            data-scroll-speed="2"
-            src="https://images.unsplash.com/photo-1672709914290-9280b3356135?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-            alt=""
-          />
-          <div data-scroll data-scroll-speed="-1" id="dets"></div>
-        </div>
-        <div id="elem3" class="elem">
-          <img
-            data-scroll
-            data-scroll-speed="2"
-            src="https://images.unsplash.com/photo-1672710097417-9b2006d5f376?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-            alt=""
-          />
-          <div data-scroll data-scroll-speed="-1" id="dets"></div>
+          <div data-scroll data-scroll-section id="leftabout">
+            <h1 class="abouth1">ABOUT</h1>
+            <p>
+              <span>W</span>elcome to my portfolio website! I am a passionate
+              and detail-oriented Frontend Web Developer. My love for crafting
+              exceptional websites drives me to continuously learn and adapt to
+              the ever-evolving tech landscape.
+            </p>
+            <p>
+              <span>I</span> approach every project with unwavering enthusiasm
+              and an eye for perfection. I believe that small details can make a
+              big difference in creating memorable user experiences.
+            </p>
+            <p>
+              <span>I</span>specialize in frontend web development and have
+              honed my skills in HTML, CSS, JavaScript, frontend libraries like
+              GSAP for animations, and Locomotive for smooth scrolling. I am
+              well-versed in creating responsive and visually appealing websites
+              that adapt flawlessly to various screen sizes and devices.
+            </p>
+          </div>
         </div>
       </div>
-      <!-- <div id="page3"></div>
-    </div> -->
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script
@@ -79,6 +70,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <script src="script.js"></script>
   </body>
 </html>

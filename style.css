@@ -30,18 +30,27 @@ body {
   height: 100vh;
   padding-top: 11vw;
 }
-#heading > h1 {
+#heading h1 {
   font-family: yy1;
   font-size: 15vw;
   line-height: 15vw;
   letter-spacing: -4px;
   padding-left: 4vw;
 }
+#namediv {
+  overflow: hidden;
+}
+#frontname {
+  overflow: hidden;
+}
 .name {
+  transform: translateY(100%);
   color: #1a1818;
 }
 
 .oname {
+  transform: translateY(100%);
+
   color: #777777;
 }
 .oname::selection {
