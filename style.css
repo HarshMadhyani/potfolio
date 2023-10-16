@@ -6,6 +6,22 @@
   font-family: yy1;
   src: url(./Yq6R-LCAWCX3-6Ky7FAFrOF6kg.ttf);
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #dadada;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(80, 80, 80);
+}
+
 *::selection {
   background-color: #777777;
 }
@@ -16,6 +32,12 @@
 }
 html,
 body {
+  height: 100%;
+  width: 100%;
+}
+#main > svg {
+  position: fixed;
+  z-index: 99;
   height: 100%;
   width: 100%;
 }
@@ -37,6 +59,7 @@ body {
   line-height: 15vw;
   letter-spacing: -4px;
   padding-left: 4vw;
+  white-space: nowrap;
 }
 #namediv {
   overflow: hidden;
@@ -80,11 +103,12 @@ body {
   margin-top: 15vw;
   margin-right: 5vw;
   margin-left: 5vw;
+  z-index: 999;
 }
 #aboutimg {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+  height: 80%;
+  width: 80%;
+  z-index: 999;
 }
 #aboutimg img {
   height: 100%;
@@ -121,14 +145,80 @@ body {
 }
 .abouth1 {
   padding-top: 3vw;
-  font-size: 12vw;
+  font-size: 10vw;
+  margin-left: 1vw;
   font-family: yy1;
-  font-weight: 100;
+  font-weight: 30;
   letter-spacing: -5px;
-  text-decoration: underline;
+  border-bottom: 2px solid black;
+  text-align: center;
 }
 #page3 {
+  height: 100%;
+  width: 100%;
+  background-color: #dadada;
+}
+#firstprt {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2vw;
+  overflow: hidden;
+}
+#imgdip {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  height: 80%;
+  width: 30%;
+  overflow: hidden;
+}
+#imgdip img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 3;
+  scale: 1;
+}
+#firstprt h1 {
+  left: 0;
+  font-size: 13vw;
+  font-family: yy1;
+  line-height: 17vw;
+  white-space: nowrap;
+  z-index: -1;
+  font-weight: 900;
+  transition: opacity ease 1s;
+}
+#firstprt h1:nth-child(3) {
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+  z-index: 4;
+  color: transparent;
+}
+#page4 {
   height: 100vh;
   width: 100%;
-  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#leeftimg {
+  width: 50%;
+  height: 50%;
+}
+#imgcnt {
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+  border-radius: 20px;
+  z-index: 9999;
+}
+#imgcnt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

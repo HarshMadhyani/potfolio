@@ -21,9 +21,11 @@ function animaTori() {
   tl.to(
     "#page1 #namediv",
     {
-      x: -400,
+      x: "-90%",
       scale: 1.3,
-      ease: Expo,
+      color: "white",
+
+      ease: Power2,
       duration: 0.8,
       scrollTrigger: {
         trigger: "#namediv",
@@ -37,7 +39,8 @@ function animaTori() {
   tl.to(
     "#page1 #frontname",
     {
-      x: 800,
+      x: 1000,
+      color: "white",
       scale: 1.3,
       ease: Power2,
       duration: 0.8,
@@ -75,6 +78,64 @@ function animaTori() {
       scrub: true,
     },
   });
+
+  gsap.to("#firstprt h1", {
+    scrollTrigger: {
+      trigger: "#page3",
+      start: "top top",
+      end: "+=1000px",
+      scrub: 3,
+      pin: true,
+    },
+    x: "-240%",
+  });
+  gsap.to("#imgdip img", {
+    scrollTrigger: {
+      trigger: "#page3",
+      start: "top top",
+      end: "+=1000px",
+      scrub: 3,
+    },
+    scale: 1.4,
+  });
+
+  gsap.from(".linesvg", {
+    drawSvg: "0",
+    duration: 1,
+  });
 }
 requestAnimationFrame(raf);
 animaTori();
+
+Shery.mouseFollower();
+Shery.makeMagnet(".magnet");
+Shery.imageEffect("#imgcnt", {
+  style: 4,
+  debug: true,
+  config: {
+    uColor: { value: true },
+    uSpeed: { value: 0.6, range: [0.1, 1], rangep: [1, 10] },
+    uAmplitude: { value: 2.94, range: [0, 5] },
+    uFrequency: { value: 6.4, range: [0, 10] },
+    geoVertex: { range: [1, 64], value: 32 },
+    zindex: { value: -9996999, range: [-9999999, 9999999] },
+    aspect: { value: 1.9854871277132762 },
+    gooey: { value: false },
+    infiniteGooey: { value: false },
+    growSize: { value: 4, range: [1, 15] },
+    durationOut: { value: 1, range: [0.1, 5] },
+    durationIn: { value: 1.5, range: [0.1, 5] },
+    displaceAmount: { value: 0.5 },
+    masker: { value: true },
+    maskVal: { value: 1.56, range: [1, 5] },
+    scrollType: { value: 0 },
+    noEffectGooey: { value: true },
+    onMouse: { value: 1 },
+    noise_speed: { value: 0.2, range: [0, 10] },
+    metaball: { value: 0.2, range: [0, 2] },
+    discard_threshold: { value: 0.5, range: [0, 1] },
+    antialias_threshold: { value: 0.002, range: [0, 0.1] },
+    noise_height: { value: 0.5, range: [0, 2] },
+    noise_scale: { value: 10, range: [0, 100] },
+  },
+});
