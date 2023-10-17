@@ -111,7 +111,6 @@ Shery.mouseFollower();
 Shery.makeMagnet(".magnet");
 Shery.imageEffect("#imgcnt", {
   style: 4,
-  debug: true,
   config: {
     uColor: { value: true },
     uSpeed: { value: 0.6, range: [0.1, 1], rangep: [1, 10] },
