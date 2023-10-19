@@ -31,7 +31,7 @@ function animaTori() {
         trigger: "#namediv",
         start: "80% 30%",
         end: "+=400px",
-        scrub: true,
+        scrub: 2,
       },
     },
     "a"
@@ -83,7 +83,7 @@ function animaTori() {
     scrollTrigger: {
       trigger: "#page3",
       start: "top top",
-      end: "+=1000px",
+      end: "+=900px",
       scrub: 3,
       pin: true,
     },
@@ -99,42 +99,37 @@ function animaTori() {
     scale: 1.4,
   });
 
-  gsap.from(".linesvg", {
-    drawSvg: "0",
-    duration: 1,
-  });
+  gsap.to(
+    ".leftpage",
+    {
+      scrollTrigger: {
+        trigger: "#page4",
+        start: "top -20px",
+        end: "+=2000px",
+        scrub: 2,
+        markers: true,
+        pin: true,
+      },
+      rotateY: "0",
+    },
+    "filp"
+  );
+  gsap.to(
+    ".rightpage",
+    {
+      scrollTrigger: {
+        trigger: "#page4",
+        start: "top -20px",
+        end: "+=2000px",
+        scrub: 2,
+      },
+      rotateY: "0",
+    },
+    "filp"
+  );
 }
 requestAnimationFrame(raf);
 animaTori();
 
 Shery.mouseFollower();
 Shery.makeMagnet(".magnet");
-Shery.imageEffect("#imgcnt", {
-  style: 4,
-  config: {
-    uColor: { value: true },
-    uSpeed: { value: 0.6, range: [0.1, 1], rangep: [1, 10] },
-    uAmplitude: { value: 2.94, range: [0, 5] },
-    uFrequency: { value: 6.4, range: [0, 10] },
-    geoVertex: { range: [1, 64], value: 32 },
-    zindex: { value: -9996999, range: [-9999999, 9999999] },
-    aspect: { value: 1.9854871277132762 },
-    gooey: { value: false },
-    infiniteGooey: { value: false },
-    growSize: { value: 4, range: [1, 15] },
-    durationOut: { value: 1, range: [0.1, 5] },
-    durationIn: { value: 1.5, range: [0.1, 5] },
-    displaceAmount: { value: 0.5 },
-    masker: { value: true },
-    maskVal: { value: 1.56, range: [1, 5] },
-    scrollType: { value: 0 },
-    noEffectGooey: { value: true },
-    onMouse: { value: 1 },
-    noise_speed: { value: 0.2, range: [0, 10] },
-    metaball: { value: 0.2, range: [0, 2] },
-    discard_threshold: { value: 0.5, range: [0, 1] },
-    antialias_threshold: { value: 0.002, range: [0, 0.1] },
-    noise_height: { value: 0.5, range: [0, 2] },
-    noise_scale: { value: 10, range: [0, 100] },
-  },
-});
