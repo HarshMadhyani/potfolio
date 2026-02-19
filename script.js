@@ -104,7 +104,6 @@ function animaTori() {
         start: "top -20px",
         end: "+=2000px",
         scrub: 2,
-        markers: true,
         pin: true,
       },
       rotateY: "0",
